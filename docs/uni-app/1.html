@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>页面跳转与生命周期 | Hello VuePress</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="Just playing around">
+    
+    <link rel="preload" href="/assets/css/0.styles.290e9ffc.css" as="style"><link rel="preload" href="/assets/js/app.e417d8c3.js" as="script"><link rel="preload" href="/assets/js/2.ae3b3647.js" as="script"><link rel="preload" href="/assets/js/9.290b99a5.js" as="script"><link rel="prefetch" href="/assets/js/3.9f41a7be.js"><link rel="prefetch" href="/assets/js/4.d1ae9c7a.js"><link rel="prefetch" href="/assets/js/5.649846ba.js"><link rel="prefetch" href="/assets/js/6.ffe6f60a.js"><link rel="prefetch" href="/assets/js/7.1288c97d.js"><link rel="prefetch" href="/assets/js/8.0fb5585c.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.290e9ffc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Hello VuePress</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="页面跳转与生命周期"><a href="#页面跳转与生命周期" class="header-anchor">#</a> 页面跳转与生命周期</h3> <p><strong>显示界面后点击 navigateTo（指向新界面，不管当前页面）</strong>
+index*onHide 页面隐藏--&gt;xxx***onLoad**页面初始化--&gt;xxx_<strong>onShow</strong>页面显示--&gt;xxx_onReady 页面渲染完成</p> <p><strong>显示第二个界面点击 navigateBack(放回上级页面并删除当前页面，点击回退键效果一样)</strong>
+xxx*onUnload 页面关闭--&gt;index***onShow**页面显示</p> <p><strong>如果在第二个界面使用 redirectTo（跳转到指定页面(新创建的)，并将当前页面从栈内去除）</strong>
+xxx_onUnload 页面关闭--&gt;index_onLoad 页面初始化--&gt; index_onShow 页面显示--&gt;index_onReady 页面渲染完成</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.e417d8c3.js" defer></script><script src="/assets/js/2.ae3b3647.js" defer></script><script src="/assets/js/9.290b99a5.js" defer></script>
+  </body>
+</html>
