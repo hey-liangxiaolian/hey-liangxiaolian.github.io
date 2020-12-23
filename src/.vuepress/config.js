@@ -2,7 +2,7 @@ module.exports = {
     title: "hey Lilian",
     dest: "./docs",
     themeConfig: {
-        // logo: "../assets/img/logo.png",
+        logo: "/logo.png",
         //导航栏
         nav: [
             { text: "Home", link: "/" },
