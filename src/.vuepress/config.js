@@ -29,6 +29,10 @@ module.exports = {
                         text: 'interview',
                         link: '/interview/1.md',
                     },
+                    {
+                        text: '兼容性',
+                        link: '/compatibility/1.md',
+                    },
                 ],
             },
             {
@@ -91,7 +95,7 @@ module.exports = {
         sidebar: {
             '/js/': [
                 ['1.md', '数组常用方法'],
-                ['2.md', '判断'],
+                ['2.md', 'ES6新特性'],
             ],
             '/interview/': [
                 ['1.md', '技能顺序'],
@@ -109,6 +113,19 @@ module.exports = {
             '/git/': [
                 ['1.md', 'git常用指令'],
                 ['2.md', 'git相关问题'],
+            ],
+            '/compatibility/': [
+                ['1.md', '兼容性'],
+                ['2.md', 'css兼容'],
+                ['3.md', 'js兼容'],
+            ],
+            '/vue/': [
+                ['1.md', '基本'],
+                ['2.md', '生命周期'],
+                ['3.md', '组件通信'],
+                ['4.md', 'Vuex'],
+                ['5.md', '其他1'],
+                ['6.md', '其他2'],
             ],
         },
 
