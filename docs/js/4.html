@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>一、Pomise.all的使用 | hey Lilian</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.d4bf95f4.css" as="style"><link rel="preload" href="/assets/js/app.0aac22fd.js" as="script"><link rel="preload" href="/assets/js/2.de107c5d.js" as="script"><link rel="preload" href="/assets/js/29.4da6c19d.js" as="script"><link rel="prefetch" href="/assets/js/10.17bcd2f6.js"><link rel="prefetch" href="/assets/js/11.32f4ed4e.js"><link rel="prefetch" href="/assets/js/12.fb92676c.js"><link rel="prefetch" href="/assets/js/13.80d5e92e.js"><link rel="prefetch" href="/assets/js/14.73c64318.js"><link rel="prefetch" href="/assets/js/15.b15fb9be.js"><link rel="prefetch" href="/assets/js/16.fa3b00bd.js"><link rel="prefetch" href="/assets/js/17.6c5d794f.js"><link rel="prefetch" href="/assets/js/18.cb323795.js"><link rel="prefetch" href="/assets/js/19.15c3867b.js"><link rel="prefetch" href="/assets/js/20.50da4eb4.js"><link rel="prefetch" href="/assets/js/21.6ff86b5d.js"><link rel="prefetch" href="/assets/js/22.4cf07bbc.js"><link rel="prefetch" href="/assets/js/23.77da0da7.js"><link rel="prefetch" href="/assets/js/24.8cd7a9ea.js"><link rel="prefetch" href="/assets/js/25.687e778d.js"><link rel="prefetch" href="/assets/js/26.fb3d9f25.js"><link rel="prefetch" href="/assets/js/27.769adfc6.js"><link rel="prefetch" href="/assets/js/28.14cc9e6f.js"><link rel="prefetch" href="/assets/js/3.fec15e05.js"><link rel="prefetch" href="/assets/js/30.e412346e.js"><link rel="prefetch" href="/assets/js/31.68f08e60.js"><link rel="prefetch" href="/assets/js/32.7e49471d.js"><link rel="prefetch" href="/assets/js/33.a5fd1723.js"><link rel="prefetch" href="/assets/js/34.086df692.js"><link rel="prefetch" href="/assets/js/35.4b058841.js"><link rel="prefetch" href="/assets/js/36.1e107aab.js"><link rel="prefetch" href="/assets/js/37.23ad41c3.js"><link rel="prefetch" href="/assets/js/38.1bf3da91.js"><link rel="prefetch" href="/assets/js/39.a70651d2.js"><link rel="prefetch" href="/assets/js/4.b3d7061b.js"><link rel="prefetch" href="/assets/js/40.84bc6d0b.js"><link rel="prefetch" href="/assets/js/5.abedb45c.js"><link rel="prefetch" href="/assets/js/6.73c063ed.js"><link rel="prefetch" href="/assets/js/7.1288c97d.js"><link rel="prefetch" href="/assets/js/8.342aa680.js"><link rel="prefetch" href="/assets/js/9.10218b85.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d4bf95f4.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="hey Lilian" class="logo"> <span class="site-name can-hide">hey Lilian</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/1.html" class="nav-link">
+  js
+</a></li><li class="dropdown-item"><!----> <a href="/css/1.html" class="nav-link">
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/vue/1.html" class="nav-link">
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/uni-app/1.html" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-item"><!----> <a href="/interview/1.html" class="nav-link">
+  interview
+</a></li><li class="dropdown-item"><!----> <a href="/http/1.html" class="nav-link">
+  HTTP
+</a></li><li class="dropdown-item"><!----> <a href="/compatibility/1.html" class="nav-link">
+  兼容性
+</a></li><li class="dropdown-item"><!----> <a href="/kuayu/1.html" class="nav-link">
+  跨域
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode/1.html" class="nav-link">
+  vscode
+</a></li><li class="dropdown-item"><!----> <a href="/git/1.html" class="nav-link">
+  git
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="扫呗" class="dropdown-title"><span class="title">扫呗</span> <span class="arrow down"></span></button> <button type="button" aria-label="扫呗" class="mobile-dropdown-title"><span class="title">扫呗</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/saobei/1.html" class="nav-link">
+  技术对接常见问题
+</a></li><li class="dropdown-item"><h4>
+          规范
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/saobei/2.html" class="nav-link">
+  代码提交规范
+</a></li></ul></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/1.html" class="nav-link">
+  js
+</a></li><li class="dropdown-item"><!----> <a href="/css/1.html" class="nav-link">
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/vue/1.html" class="nav-link">
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/uni-app/1.html" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-item"><!----> <a href="/interview/1.html" class="nav-link">
+  interview
+</a></li><li class="dropdown-item"><!----> <a href="/http/1.html" class="nav-link">
+  HTTP
+</a></li><li class="dropdown-item"><!----> <a href="/compatibility/1.html" class="nav-link">
+  兼容性
+</a></li><li class="dropdown-item"><!----> <a href="/kuayu/1.html" class="nav-link">
+  跨域
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vscode/1.html" class="nav-link">
+  vscode
+</a></li><li class="dropdown-item"><!----> <a href="/git/1.html" class="nav-link">
+  git
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="扫呗" class="dropdown-title"><span class="title">扫呗</span> <span class="arrow down"></span></button> <button type="button" aria-label="扫呗" class="mobile-dropdown-title"><span class="title">扫呗</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/saobei/1.html" class="nav-link">
+  技术对接常见问题
+</a></li><li class="dropdown-item"><h4>
+          规范
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/saobei/2.html" class="nav-link">
+  代码提交规范
+</a></li></ul></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/js/1.html" class="sidebar-link">数组常用方法</a></li><li><a href="/js/2.html" class="sidebar-link">ES6新特性</a></li><li><a href="/js/3.html" class="sidebar-link">JS深拷贝</a></li><li><a href="/js/4.html" aria-current="page" class="active sidebar-link">Promise</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h5 id="一、pomise-all的使用"><a href="#一、pomise-all的使用" class="header-anchor">#</a> 一、Pomise.all的使用</h5> <p>(https://www.jianshu.com/p/7e60fc1be1b2)</p> <p><strong>Promise.all可以将多个Promise实例包装成一个新的Promise实例。同时，成功和失败的返回值是不同的，成功的时候返回的是一个结果数组，而失败的时候则返回最先被reject失败状态的值。</strong></p> <p>具体代码如下：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> p1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'成功了'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">let</span> p2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'success'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">let</span> p3 <span class="token operator">=</span> Promse<span class="token punctuation">.</span><span class="token function">reject</span><span class="token punctuation">(</span><span class="token string">'失败'</span><span class="token punctuation">)</span>
+
+Promise<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span><span class="token punctuation">[</span>p1<span class="token punctuation">,</span> p2<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">result</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>               <span class="token comment">//['成功了', 'success']</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+Promise<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span><span class="token punctuation">[</span>p1<span class="token punctuation">,</span>p3<span class="token punctuation">,</span>p2<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">result</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>      <span class="token comment">// 失败了，打出 '失败'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>Promse.all在处理多个异步处理时非常有用，比如说一个页面上需要等两个或多个ajax的数据回来以后才正常显示，在此之前只显示loading图标。</p> <p>代码模拟：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> <span class="token function-variable function">wake</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">time</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>time <span class="token operator">/</span> <span class="token number">1000</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">秒后醒来</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> time<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> p1 <span class="token operator">=</span> <span class="token function">wake</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">)</span>
+<span class="token keyword">let</span> p2 <span class="token operator">=</span> <span class="token function">wake</span><span class="token punctuation">(</span><span class="token number">2000</span><span class="token punctuation">)</span>
+
+Promise<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span><span class="token punctuation">[</span>p1<span class="token punctuation">,</span> p2<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">result</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>       <span class="token comment">// [ '3秒后醒来', '2秒后醒来' ]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p><strong>需要特别注意的是，Promise.all获得的成功结果的数组里面的数据顺序和Promise.all接收到的数组顺序是一致的，即p1的结果在前，即便p1的结果获取的比p2要晚。这带来了一个绝大的好处：在前端开发请求数据的过程中，偶尔会遇到发送多个请求并根据请求顺序获取和使用数据的场景，使用Promise.all毫无疑问可以解决这个问题。</strong></p> <h5 id="二、promise-race的使用"><a href="#二、promise-race的使用" class="header-anchor">#</a> 二、Promise.race的使用</h5> <p>顾名思义，Promse.race就是赛跑的意思，意思就是说，Promise.race([p1, p2, p3])里面哪个结果获得的快，就返回那个结果，不管结果本身是成功状态还是失败状态。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> p1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'success'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">let</span> p2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">reject</span><span class="token punctuation">(</span><span class="token string">'failed'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+Promise<span class="token punctuation">.</span><span class="token function">race</span><span class="token punctuation">(</span><span class="token punctuation">[</span>p1<span class="token punctuation">,</span> p2<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">result</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>  <span class="token comment">// 打开的是 'failed'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>原理是挺简单的，但是在实际运用中还没有想到什么的使用场景会使用到。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/js/3.html" class="prev">
+        JS深拷贝
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.0aac22fd.js" defer></script><script src="/assets/js/2.de107c5d.js" defer></script><script src="/assets/js/29.4da6c19d.js" defer></script>
+  </body>
+</html>

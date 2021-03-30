@@ -30,8 +30,16 @@ module.exports = {
                         link: '/interview/1.md',
                     },
                     {
+                        text: 'HTTP',
+                        link: '/http/1.md',
+                    },
+                    {
                         text: '兼容性',
                         link: '/compatibility/1.md',
+                    },
+                    {
+                        text: '跨域',
+                        link: '/kuayu/1.md',
                     },
                 ],
             },
@@ -69,33 +77,12 @@ module.exports = {
         ],
         // 侧边栏
         sidebar: 'auto',
-        // sidebar: false,
-        // sidebar: {
-        //     "/saobei/": ["1.html", "2.html"],
-        // },
-        // [
-        // {
-        //     title: "首页", // 必要的
-        //     path: "/", // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-        // },
-        // {
-        //     title: "前端",
-        //     children: [
-        //         {
-        //             title: "JS",
-        //             path: "/js/1.html",
-        //         },
-        //         {
-        //             title: "uni-app",
-        //             path: "/uni-app/1.html",
-        //         },
-        //     ],
-        // },
-        // ]
         sidebar: {
             '/js/': [
                 ['1.md', '数组常用方法'],
                 ['2.md', 'ES6新特性'],
+                ['3.md', 'JS深拷贝'],
+                ['4.md', 'Promise'],
             ],
             '/interview/': [
                 ['1.md', '技能顺序'],
@@ -126,6 +113,11 @@ module.exports = {
                 ['4.md', 'Vuex'],
                 ['5.md', '其他1'],
                 ['6.md', '其他2'],
+            ],
+            '/http/': [
+                ['1.md', 'HTTP请求方法'],
+                ['2.md', 'HTTP状态码'],
+                ['3.md', 'HTTP缓存'],
             ],
         },
 
